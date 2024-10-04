@@ -30,40 +30,40 @@ int main ()
     
     
     //determining minimum score
-        if (scoreOne < scoreTwo && scoreOne < scoreThree && scoreOne < scoreFour && scoreOne < scoreFive && scoreOne < scoreSix) {
-            lowestScore = scoreOne; 
-        } else if (scoreTwo < scoreOne && scoreTwo < scoreThree && scoreTwo < scoreFour && scoreTwo < scoreFive && scoreTwo < scoreSix) {
-            lowestScore = scoreTwo; 
-        } else if (scoreThree < scoreOne && scoreThree < scoreTwo && scoreThree < scoreFour && scoreThree < scoreFive && scoreThree < scoreSix) {
-            lowestScore = scoreThree; 
-        } else if (scoreFour < scoreOne && scoreFour < scoreTwo && scoreFour < scoreThree && scoreFour < scoreFive && scoreFour < scoreSix) {
-            lowestScore = scoreFour; 
-        } else if (scoreFive < scoreOne && scoreFive < scoreTwo && scoreFive < scoreThree && scoreFive < scoreFour && scoreFive < scoreSix) {
-            lowestScore = scoreFive; 
-        } else if (scoreSix < scoreOne && scoreSix < scoreTwo && scoreSix < scoreThree && scoreSix < scoreFour && scoreSix < scoreFive) {
-            lowestScore = scoreSix;
+        if (scoreOne <= scoreTwo && scoreOne <= scoreThree && scoreOne <= scoreFour && scoreOne <= scoreFive && scoreOne <= scoreSix) { //if score one is less than or equal to every other score
+            lowestScore = scoreOne; //setting lowest score to score one
+        } else if (scoreTwo <= scoreOne && scoreTwo <= scoreThree && scoreTwo <= scoreFour && scoreTwo <= scoreFive && scoreTwo <= scoreSix) { //if score two is less than or equal to every other score
+            lowestScore = scoreTwo; //setting lowest score to score two
+        } else if (scoreThree <= scoreOne && scoreThree <= scoreTwo && scoreThree <= scoreFour && scoreThree <= scoreFive && scoreThree <= scoreSix) { //if score three is less than or equal to every other score
+            lowestScore = scoreThree; //setting lowest score to score three
+        } else if (scoreFour <= scoreOne && scoreFour <= scoreTwo && scoreFour <= scoreThree && scoreFour <= scoreFive && scoreFour <= scoreSix) { //if score four is less than or equal to every other score
+            lowestScore = scoreFour; //setting lowest score to score four
+        } else if (scoreFive <= scoreOne && scoreFive <= scoreTwo && scoreFive <= scoreThree && scoreFive <= scoreFour && scoreFive <= scoreSix) { //if score five is less than or equal to every other score
+            lowestScore = scoreFive; //setting lowest score to score five
+        } else if (scoreSix <= scoreOne && scoreSix <= scoreTwo && scoreSix <= scoreThree && scoreSix <= scoreFour && scoreSix <= scoreFive) { //if score six is less than or equal to every other score
+            lowestScore = scoreSix; //setting lowest score to score six
         }
    
     //determining maximum score
-        if (scoreOne > scoreTwo && scoreOne > scoreThree && scoreOne > scoreFour && scoreOne > scoreFive && scoreOne > scoreSix) {
-            highestScore = scoreOne; 
-        } else if (scoreTwo > scoreOne && scoreTwo > scoreThree && scoreTwo > scoreFour && scoreTwo > scoreFive && scoreTwo > scoreSix) {
-            highestScore = scoreTwo; 
-        } else if (scoreThree > scoreOne && scoreThree > scoreTwo && scoreThree > scoreFour && scoreThree > scoreFive && scoreThree > scoreSix) {
-            highestScore = scoreThree;
-        } else if (scoreFour > scoreOne && scoreFour > scoreTwo && scoreFour > scoreThree && scoreFour > scoreFive && scoreFour > scoreSix) {
-            highestScore = scoreFour; 
-        } else if (scoreFive > scoreOne && scoreFive > scoreTwo && scoreFive > scoreThree && scoreFive > scoreFour && scoreFive > scoreSix) {
-            highestScore = scoreFive; 
-        } else if (scoreSix > scoreOne && scoreSix > scoreTwo && scoreSix > scoreThree && scoreSix > scoreFour && scoreSix > scoreFive) {
-            highestScore = scoreSix;
+        if (scoreOne >= scoreTwo && scoreOne >= scoreThree && scoreOne >= scoreFour && scoreOne >= scoreFive && scoreOne >= scoreSix) { //if score one is greater than or equal to every other score
+            highestScore = scoreOne; //setting highest score to score one
+        } else if (scoreTwo >= scoreOne && scoreTwo >= scoreThree && scoreTwo >= scoreFour && scoreTwo >= scoreFive && scoreTwo >= scoreSix) { //if score two is greater than or equal to every other score
+            highestScore = scoreTwo; //setting highest score to score two
+        } else if (scoreThree >= scoreOne && scoreThree >= scoreTwo && scoreThree >= scoreFour && scoreThree >= scoreFive && scoreThree >= scoreSix) { //if score three is greater than or equal to every other score
+            highestScore = scoreThree; //setting highest score to score three
+        } else if (scoreFour >= scoreOne && scoreFour >= scoreTwo && scoreFour >= scoreThree && scoreFour >= scoreFive && scoreFour >= scoreSix) { //if score four is greater than or equal to every other score
+            highestScore = scoreFour; //setting highest score to score four
+        } else if (scoreFive >= scoreOne && scoreFive >= scoreTwo && scoreFive >= scoreThree && scoreFive >= scoreFour && scoreFive >= scoreSix) { //if score five is greater than or equal to every other score
+            highestScore = scoreFive; //setting highest score to score five
+        } else if (scoreSix >= scoreOne && scoreSix >= scoreTwo && scoreSix >= scoreThree && scoreSix >= scoreFour && scoreSix >= scoreFive) { //if score six is greater than or equal to every other score
+            highestScore = scoreSix; //setting highest score to score six
         }
     
     //formulas
     float totalScore = (scoreOne + scoreTwo + scoreThree + scoreFour + scoreFive + scoreSix); //adding all six scores
     float finalScore = (totalScore - lowestScore - highestScore)/4; //finding mean after subtracting highest and lowest scores
     
-    //calculating final score
+    //saying the final score
     cout << "The final score is " << (finalScore) << "!" << endl;
     
     return 0; 
